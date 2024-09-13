@@ -1,0 +1,22 @@
+<h1>Similar music to '<%= @query %>':</h1>
+
+  <% if @recommendations.any? %>
+    <ul>
+      <% @recommendations.each do |item| %>
+        <li>
+          <% if item["wurl"] && !item["wurl"].empty? %>
+            <strong>
+              <a href="<%= item["wurl"] %>" target="_blank" rel="noopener noreferrer"><%= item["name"] %></a>
+            </strong><br>
+          <% else %>
+            <strong><%= item["name"] %></strong><br>
+          <% end %>
+        </li>
+        <br>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No similar music found for '<%= @query %>'.</p>
+  <% end %>
+
+  <a href="/">Search again</a>
