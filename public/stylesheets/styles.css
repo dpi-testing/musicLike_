@@ -1,0 +1,54 @@
+body{ 
+background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+a {
+  text-decoration: none; 
+  color: #333; 
+  text-align: center;
+}
+
+a:hover {
+  color: #555; 
+  text-decoration: underline;
+}
+
+header{
+text-align: center;
+
+}
+
+h1{
+  text-align: center;
+}
+
+form{
+  text-align: center;
+}
+
+ul{
+  text-align: center;
+  list-style-type: none;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 30px;
+  width: 250px;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  padding-top: 5px;
+}
+li{
+  padding-right: 35px;
+  
+}
+
+.search-again-container {
+  display: flex;
+  justify-content: center; 
+  margin: 20px 0; 
+}
+
+.recommendations-container{
+display:flex;
+justify-content: center;
+text-align: center;
+}

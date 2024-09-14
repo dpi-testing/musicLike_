@@ -1,16 +1,22 @@
-<h1>Similar music to '<%= @query %>':</h1>
-
+<h1><%= @query %>:</h1>
+<div class="recommendations-container">
   <% if @recommendations.any? %>
     <ul>
       <% @recommendations.each do |item| %>
         <li>
-          <% if item["wurl"] && !item["wurl"].empty? %>
+          <% if item["wUrl"] && !item["wUrl"].empty? %>
             <strong>
-              <a href="<%= item["wurl"] %>" target="_blank" rel="noopener noreferrer"><%= item["name"] %></a>
+              <a href="<%= item["wUrl"] %>" target="_blank" rel="noopener noreferrer"><%= item["name"] %></a>
             </strong><br>
           <% else %>
             <strong><%= item["name"] %></strong><br>
           <% end %>
+
+        <% if item["yUrl"] && !item["yUrl"].empty? %>
+          <div style="margin-top: 5px;">
+            <a href="<%= item["yUrl"] %>" target="_blank" rel="noopener noreferrer">Listen on YouTube</a>
+          </div>
+        <% end %>
         </li>
         <br>
       <% end %>
@@ -18,5 +24,7 @@
   <% else %>
     <p>No similar music found for '<%= @query %>'.</p>
   <% end %>
-
+  </div>
+  <div class="search-again-container">
   <a href="/">Search again</a>
+  </div>
