@@ -1,18 +1,15 @@
-# sinatra-template
+# Music Like
 
-Use this repository to create new Sinatra apps. 
+A simple app to help find similar artists to ones you already know.
 
-Optionally, to use `ActiveRecord` for database operations, add to the `app.rb`:
+Type in the artist name and click Search
 
-```ruby
-require "sinatra/activerecord"
-```
+You will be taken to a page with 10 recommendations of music like the artist you typed in
+  Clicking the artist name will take you to their wikipedia page
+  A second link can be followed to listen to a song on youtube
 
-And in the `config/environment.rb` file add this code block:
+  If none of these are available just the artist name will be listed
 
-```ruby
-configure do
-  # setup a database connection
-  set(:database, { adapter: "sqlite3", database: "db/development.sqlite3" })
-end
-```
+Afterwards you can click search again to start the process over.
+
+
