@@ -1,21 +1,32 @@
 body{ 
 background: rgb(238,174,202);
 background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+overflow: auto;
+height: 100%;
 }
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
 a {
   text-decoration: none; 
-  color: #333; 
+  color: #333A3F;
   text-align: center;
 }
 
 a:hover {
-  color: #555; 
+  
   text-decoration: underline;
 }
 
 header{
 text-align: center;
-
+font-family: "Inter Tight", sans-serif;
+font-weight: 500;
+font-style: italic;
+font-size: 10rem;
 }
 
 h1{
@@ -23,7 +34,10 @@ h1{
 }
 
 form{
-  text-align: center;
+text-align: center;
+font-family: "Inter Tight", sans-serif;
+font-optical-sizing: auto;
+
 }
 
 ul{
@@ -38,13 +52,16 @@ ul{
 }
 li{
   padding-right: 35px;
-  
 }
 
 .search-again-container {
   display: flex;
   justify-content: center; 
   margin: 20px 0; 
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 400;
+  color: #333333;
+  font-style:italic;
 }
 
 .recommendations-container{
@@ -52,3 +69,28 @@ display:flex;
 justify-content: center;
 text-align: center;
 }
+
+input{
+  text-align: center;
+  font-family: "Inter Tight", sans-serif;
+  color: #333333;
+  font-size: 1.5rem;
+  }
+
+  label{
+    font-family: "Inter Tight", sans-serif;
+    color: #333333;
+    font-size: 1.5rem;
+  }
+
+  h1{
+    text-align: center;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+  }
+
+  li{
+    font-family: "Inter Tight", sans-serif;
+    color: #333333
+  }
