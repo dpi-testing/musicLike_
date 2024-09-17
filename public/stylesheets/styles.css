@@ -19,7 +19,6 @@ a {
 }
 
 a:hover {
-  
   text-decoration: underline;
 }
 
@@ -35,11 +34,21 @@ h1{
   text-align: center;
 }
 
+.form-container{
+  display: flex;
+  justify-content: center;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 30px;
+  margin: auto;
+  width: 50%;
+  margin-top: 100px;
+}
+
 form{
 text-align: center;
 font-family: "Inter Tight", sans-serif;
 font-optical-sizing: auto;
-
+padding: 10px;
 }
 
 ul{
