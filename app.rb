@@ -20,9 +20,11 @@ get("/results") do
 
   raw_response = HTTP.get(url)
 
-  parsed_response = JSON.parse(raw_response)
+  response_body = raw_response.to_s
+
+  parsed_response = JSON.parse(response_body)
 
   @recommendations = parsed_response.dig("similar", "results")
-  
+
   erb(:results)
 end
