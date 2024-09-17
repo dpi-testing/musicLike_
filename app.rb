@@ -13,11 +13,8 @@ get("/results") do
     redirect "/"
   end
 
-  @api_key = ENV.fetch("TASTE_DIVE_KEY", nil)
-  if @api_key.nil? || @api_key.empty?
-    halt 500, "API key is missing. Please set the TASTE_DIVE_KEY environment variable."
-  end
-
+  @api_key = ENV.fetch("TASTE_DIVE_KEY")
+  
  # @api_key = ENV.fetch['TASTE_DIVE_KEY']
 
   @url = "https://tastedive.com/api/similar?q=#{@query}&type=music&limit=10&info=1&k=#{@api_key}"
