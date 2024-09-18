@@ -2,6 +2,7 @@ require "sinatra"
 require "sinatra/reloader"
 require "http"
 require "json"
+require "dotenv/load"
 
 get("/") do
   erb(:homepage)
@@ -24,7 +25,8 @@ get("/results") do
 
   parsed_response = JSON.parse(response_body)
 
-  @recommendations = parsed_response.dig("similar", "results")
+  # Safely dig into the response to avoid nil values
+  @recommendations = parsed_response.dig("Similar", "Results") || []
 
   erb(:results)
 end
