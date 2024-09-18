@@ -1,38 +1,21 @@
-source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+source 'https://rubygems.org'
 
-ruby "3.2.1"
+# Sinatra framework
+gem 'sinatra'
 
-gem 'http', '~> 3.0'
+# For automatic code reloading in development
+gem 'sinatra-contrib'
 
-gem "sinatra"
-gem "sinatra-contrib"
+# HTTP requests to interact with external APIs
+gem 'http'
 
-# Use Puma as the app server
-gem "puma", "~> 5.0"
+# For managing environment variables
+gem 'dotenv'
 
-# use active record
-gem "sinatra-activerecord"
+# Optionally, for more advanced debugging tools during development
+gem 'pry'
 
 group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
-  gem "table_print"
-  gem "appdev_support"
-end
-
-group :development, :test do
-  gem "grade_runner"
-  gem "pry"
-  gem "sqlite3", "~> 1.4"
-end
-
-group :test do
-  gem "capybara"
-  gem "draft_matchers"
-  gem "rspec"
-  gem "rspec-html-matchers"
-  gem "webmock"
-  gem "webdrivers"
-  gem "i18n"
+  # For reloading Sinatra automatically when files change
+  gem 'shotgun'
 end
